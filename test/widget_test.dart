@@ -4,6 +4,7 @@ import 'package:drakson/drakson_app.dart';
 void main() {
   testWidgets('DraksonApp smoke test', (WidgetTester tester) async {
     await tester.pumpWidget(const DraksonApp());
-    expect(find.byType(DraksonApp), findsOneWidget);
+    await tester.pump();
+    expect(find.text('Drakson Craft Studio'), findsWidgets);
   });
 }
