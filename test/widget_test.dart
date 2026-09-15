@@ -1,10 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:drakson/product/product_app.dart';
+import 'package:drakson/drakson_app.dart';
 
 void main() {
-  testWidgets('Smoke test', (WidgetTester tester) async {
-    await tester.pumpWidget(const MaterialApp(home: ProductApp()));
-    expect(find.byType(ProductApp), findsOneWidget);
+  testWidgets('DraksonApp smoke test', (WidgetTester tester) async {
+    await tester.pumpWidget(const DraksonApp());
+    expect(find.byType(DraksonApp), findsOneWidget);
   });
 }
